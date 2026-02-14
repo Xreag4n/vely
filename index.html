@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <title>For vely</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <nav class="nav-content">
+            <h1 class="logo">VELY</h1>
+            <ul class="nav-links">
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#recuerdos">Recuerdos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Burbuja de música -->
+    <div class="music-bubble" id="musica">
+        <div class="music-main">
+            <img src="media/vinyl.png" alt="Reproductor" id="currentDisc">
+        </div>
+
+<div class="music-menu">
+    <!-- Marcamos la primera como inicial -->
+    <img src="media/albums/valentine.avif" alt="Canción 1" class="music-item" data-audio="media/songs/valentine.mp3" data-initial="true">
+
+    <img src="media/albums/love.jfif" alt="Canción 2" class="music-item" data-audio="media/songs/love.mp3">
+    <img src="media/albums/love_wins_all.jfif" alt="Canción 3" class="music-item" data-audio="media/songs/love_wins_all.mp3">
+    <img src="media/albums/only.jfif" alt="Canción 4" class="music-item" data-audio="media/songs/song4.mp3">
+    <img src="media/albums/understand.jfif" alt="Canción 5" class="music-item" data-audio="media/songs/song5.mp3">
+    <img src="media/albums/flaco.jfif" alt="Canción 6" class="music-item" data-audio="media/songs/song6.mp3">
+    <img src="media/albums/falling_again.jfif" alt="Canción 7" class="music-item" data-audio="media/songs/song7.mp3">
+    <img src="media/albums/with_you.jfif" alt="Canción 8" class="music-item" data-audio="media/songs/song8.mp3">
+    <img src="media/albums/i_hear_a_symphony.jfif" alt="Canción 9" class="music-item" data-audio="media/songs/song9.mp3">
+    <img src="media/albums/golden hour.jfif" alt="Canción 10" class="music-item" data-audio="media/songs/song10.mp3">
+    <img src="media/albums/dandelions.avif" alt="Canción 11" class="music-item" data-audio="media/songs/song11.mp3">
+    <img src="media/albums/die_with_a_smile.jfif" alt="Canción 12" class="music-item" data-audio="media/songs/song12.mp3">
+    <img src="media/albums/everytime_we_touch.jpg" alt="Canción 13" class="music-item" data-audio="media/songs/song13.mp3">
+    <img src="media/albums/eve-evelyn.jfif" alt="Canción 14" class="music-item" data-audio="media/songs/song14.mp3">
+    <img src="media/albums/lucky_ones.jfif" alt="Canción 15" class="music-item" data-audio="media/songs/song15.mp3">
+    <img src="media/albums/bts.jfif" alt="Canción 16" class="music-item" data-audio="media/songs/song16.mp3">
+    <img src="media/albums/city_of_stars.png" alt="Canción 17" class="music-item" data-audio="media/songs/song17.mp3">
+    <img src="media/albums/bts.jfif" alt="Canción 18" class="music-item" data-audio="media/songs/best_of_me.mp3">
+</div>
+
+
+
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Sección galería -->
+<section id="galeria" class="gallery">
+
+  <div class="gallery-card">
+    <img src="media/galeria/1.webp" alt="Foto 1" class="gallery-item" data-text="Este día fue cuando supe que me gustabas más de lo normal.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/2.jpg" alt="Foto 2" class="gallery-item" data-text="No tienes idea de lo feliz que fui aquí contigo.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/3.jpg" alt="Foto 3" class="gallery-item" data-text="Quiero muchos recuerdos más contigo.">
+  </div>
+
+    <div class="gallery-card">
+    <img src="media/galeria/a.jpg" alt="Foto 17" class="gallery-item" data-text="Gracias por hacerme tan feliz.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/5.jpg" alt="Foto 5" class="gallery-item" data-text="Aquí me di cuenta de que te amo.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/4.jpg" alt="Foto 6" class="gallery-item" data-text="Gracias por hacer este día tan especial.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/6.jpg" alt="Foto 7" class="gallery-item" data-text="Contigo todo es más bonito.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/b.jpg" alt="Foto 21" class="gallery-item" data-text="En las buenas y en las malas contigo vely.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/7.jpg" alt="Foto 8" class="gallery-item" data-text="No cambio este momento por nada.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/c.jpg" alt="Foto 21" class="gallery-item" data-text="Te ame, te amo y te amare por la eternidad mi niña.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/8.jpg" alt="Foto 9" class="gallery-item" data-text="Siempre quiero más momentos así contigo.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/9.jpg" alt="Foto 10" class="gallery-item" data-text="Eres mi lugar favorito.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/10.jpg" alt="Foto 11" class="gallery-item" data-text="Gracias por existir en mi vida.">
+  </div>
+  
+  <div class="gallery-card">
+    <img src="media/galeria/d.jpg" alt="Foto 21" class="gallery-item" data-text="El mejor lugar del universo es a tu lado.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/e.jpg" alt="Foto 21" class="gallery-item" data-text="Nadie jamas me amara tanto como tu.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/11.jpg" alt="Foto 12" class="gallery-item" data-text="Este recuerdo lo guardo en el corazón.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/12.jpg" alt="Foto 13" class="gallery-item" data-text="A tu lado todo se siente correcto.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/f.jpg" alt="Foto 22" class="gallery-item" data-text="Gracias por compartir tu vida conmigo.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/13.jpg" alt="Foto 14" class="gallery-item" data-text="Nunca olvides lo mucho que te amo.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/14.jpg" alt="Foto 15" class="gallery-item" data-text="Por ti hare lo que sea.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/15.jpg" alt="Foto 16" class="gallery-item" data-text="Este día fue perfecto por ti.">
+  </div>
+
+  <div class="gallery-card">
+    <img src="media/galeria/g.jpg" alt="Foto 23" class="gallery-item" data-text="Cada día me enamoro más de ti.">
+  </div>
+  
+
+  <div class="gallery-card">
+
+
+        <!-- Sección de texto -->
+        <section id="recuerdos" class="text-section">
+            <h2>Un pequeño mensaje para ti ❤️</h2>
+            <p>
+              No hay una manera establecida sobre como empezar a escribir... Bueno, los cuentos generalmente empiezan por "había una vez..." Y aún que nuestra historia se siente como uno también me siento feliz de decir que no lo es, que lo que hemos vivido no es producto de un sueño o de mi imaginación, de igual forma me siento orgulloso de poder decir con total seguridad lo afortunado que soy, no cualquiera tiene la suerte de poder ser pareja de tan perfecta chica que eres tu y aún que me gusta alagarte como no tienes idea no es a lo que vengo hoy... Bueno cy pero ño solo a eso Oe.
+            </p>
+            <p>
+Primero estoy escribiendo esto y luego lo voy a pasar a esta página que estás viendo ahora así que no se que tanto espacio tenga por eso lo intentare hacer un poco breve, para que no pierda estructura pero lo diré de una forma que se entienda todo lo que quiero expresarte... Ahora que lo pienso haber dado está explicacion ya quitó un poco de espacio pero ya ni modos.
+            </p>
+            <p>
+Te amo, ia... Ño cheto, escribo como cy ño pudieras ver qué el texto sigue viste? Pero cy te amo, tan solo 2 palabras pero dependiendo la persona y la intención puede tener un gran significado, este es el caso. Hagamos un breve recuento de que ha pasado, nos conocimos hace más de 5 años gracias a nuestros gustos en común pero también gracias a Irasema, después por casualidad o destino (yo digo que destino) nos encontramos en un... Velorio sin saber si realmente éramos nosotros (va a estar gracioso decirle a nuestros hijos donde nos vimos por primera vez) y poco tiempo después empezamos a salir, aún que no lo recuerdes y lo demostrará mucho menos que ahora, recuerdo muy bien lo feliz que fui cada que iba a verte, siento que me dirías qué ño me disculpé por lo que ya pasó pero... Me sigo arrepintiendo, OJO, ño me disculpé, pero cy... Termine contigo... Y luego me buscaste, volvimos a salir aún que por poco tiempo (pendejes mia) y en septiembre de 2024 volví a tu vida, bien dice Mabel, si el destino no los quiere juntos, fuercenlo, busque por todos los medios posibles hablar contigo y de la forma menos esperada posible (quizas) me respondiste... Me está queriendo hacer llorar un poco (poco mucho) recordar lo que pasó pero está parte de la historia estoy seguro la recuerdas. Nunca voy a olvidar lo feliz que he sido todo este tiempo a tu lado, a pesar de que en un momento las cosas no hayan estado del todo bien, jamás habrá mejores momentos que los que paso junto a ti.
+            </p>
+            <p>
+Gracias por pasar este 14 de febrero a mi lado, te amo vely
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Modal / visor de foto -->
+    <div class="photo-modal" id="photoModal">
+        <div class="photo-modal-content">
+            <span class="photo-modal-close" id="closeModal">&times;</span>
+            <img src="" alt="Foto ampliada" id="modalImage">
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <!-- JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>

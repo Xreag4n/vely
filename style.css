@@ -1,0 +1,296 @@
+@font-face {
+    font-family: bario;
+    src: url(fonts/Bario.ttf);
+}
+
+@font-face {
+    font-family: reenie;
+    src: url(fonts/Reenie.ttf);
+}
+
+h1{
+    font-family: bario;
+    font-weight: normal;
+}
+
+h2{
+    font-family: bario;
+    font-weight: normal;
+}
+
+li{
+    font-family: 'reenie', Courier, monospace;
+    font-size: 30px;
+}
+
+p{
+    font-family: reenie;
+    font-size: 3px;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #95a3c5; /* azul oscuro bonito */
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.658);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    color: #ffffff; /* rosa suave */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #c1dbe2;
+}
+
+/* Espacio para que el contenido no quede bajo la navbar */
+main {
+    padding-top: 90px;
+}
+
+/* =========================
+   GALERÍA ESTILO PINTEREST
+========================= */
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    column-count: 4;
+    column-gap: 1rem;
+}
+
+.gallery-item {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    break-inside: avoid;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive columnas */
+@media (max-width: 1100px) {
+    .gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 700px) {
+    .gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        column-count: 1;
+    }
+}
+
+/* =========================
+   SECCIÓN TEXTO
+========================= */
+.text-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.text-section h2 {
+    color: #4539b8;
+    margin-bottom: 1rem;
+}
+
+.text-section p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* =========================
+   MODAL DE FOTOS
+========================= */
+.photo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* Se mostrará con JS */
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.photo-modal-content {
+    background: #020617;
+    border-radius: 16px;
+    max-width: 90%;
+    max-height: 90%;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+.photo-modal-content img {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.photo-modal-content p {
+    color: #e5e7eb;
+    font-size: 1rem;
+}
+
+.photo-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: #4539b8;
+    cursor: pointer;
+}
+
+.gallery-card {
+  width: 100%;
+  break-inside: avoid; /* importantísimo para estilo Pinterest */
+  margin-bottom: 12px;
+}
+
+.photo-inline-text {
+    font-family: reenie;
+  width: 100%;
+  margin: 10px 0 20px 0;
+  padding: 10px 14px;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  line-height: 1.4;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   BURBUJA DE MÚSICA (BASE)
+========================= */
+.music-bubble {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    z-index: 1500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Disco principal */
+.music-main img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Menú horizontal de canciones */
+.music-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    overflow-x: auto;   /* solo scroll horizontal */
+    overflow-y: hidden; /* NUNCA vertical */
+
+    max-width: 0;       /* oculto por defecto */
+    opacity: 0;
+    pointer-events: none;
+
+    transition: all 0.3s ease;
+
+    scrollbar-width: none; /* Firefox */
+}
+
+.music-menu::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+/* Mostrar menú al pasar el mouse */
+.music-bubble:hover .music-menu {
+    max-width: 300px;          /* Ajusta según cuánto quieras mostrar */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Vinilos del menú */
+.music-menu img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;            /* Para que no se aplasten en horizontal */
+
+    transition: transform 0.2s ease;
+}
+
+.music-menu img:hover {
+    transform: scale(1.1);
+}
